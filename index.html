@@ -72,7 +72,8 @@
         }
         p, li { color: var(--muted); font-size: 1rem; }
         ul { padding-left: 20px; }
-        a.contact-link { color: var(--based); font-weight: bold; }
+        a { color: var(--based); font-weight: bold; text-decoration: none; }
+        a:hover { text-decoration: underline; }
         
         .footer {
             text-align: center;
@@ -113,11 +114,11 @@
                 <li><strong>OpenAI:</strong> Your text prompts are sent to OpenAI for moderation and story generation. OpenAI does not use this data to train public models.</li>
                 <li><strong>Giphy:</strong> We use Giphy's API to fetch relevant GIFs based on generated keywords.</li>
                 <li><strong>Cloudinary:</strong> Used to compile the final shareable videos/GIFs.</li>
-                <li><strong>Google Firebase:</strong> Used for secure backend infrastructure, database (Firestore), and crash reporting.</li>
+                <li><strong>Google Firebase:</strong> Used for secure backend infrastructure, database (Firestore), and crash reporting (Firebase Crashlytics).</li>
             </ul>
 
             <h3>3. Advertising & Analytics</h3>
-            <p>Our app offers rewarded ad viewing in exchange for in-game attempts. We use third-party advertising networks (such as Google AdMob). These networks may collect and process data like your IP address and device Advertising ID to serve relevant ads. You can opt-out of personalized ads in your device settings.</p>
+            <p>Our app offers rewarded ad viewing in exchange for in-game attempts. We use third-party advertising networks (such as Google AdMob). These networks may collect and process data like your IP address and device Advertising ID to serve relevant ads. You can opt-out of personalized ads in your device settings. For more information on how Google uses your data, please visit <a href="https://policies.google.com/technologies/partner-sites" target="_blank">Google's Privacy & Terms site</a>.</p>
 
             <h3>4. Age Restriction (Children's Privacy)</h3>
             <p>This app is intended for mature audiences due to satirical and absurd humor. We do not knowingly collect data from children under 13 (or 16 in certain EU countries). If you are a parent and believe your child has provided us with data, contact us for immediate deletion.</p>
@@ -125,9 +126,12 @@
             <h3>5. Private Content Generation (Not a Social Network)</h3>
             <p>CRINGEorBASED is a single-player experience. The stories and videos you generate are created locally for your device. We do not host a public feed, public profiles, or a social timeline. You are solely responsible for any content you choose to export and share externally on third-party social media platforms.</p>
 
-            <h3>6. Contact Us</h3>
+            <h3>6. Data Retention & User Rights</h3>
+            <p>We retain generated stories (<code>cached_stories</code>) for up to 30 days to optimize performance, after which they are automatically deleted. Your device generation limits data (<code>device_limits</code>) is automatically deleted after 3 years of inactivity. Device IDs associated with severe Terms violations (bans) are retained permanently to enforce the ban. You have the right to request the deletion of your data at any time by contacting us.</p>
+
+            <h3>7. Contact Us</h3>
             <p>If you have any questions or data deletion requests, email us at: <br>
-               <a href="mailto:stoic.labs.dev@gmail.com" class="contact-link">stoic.labs.dev@gmail.com</a>
+               <a href="mailto:stoic.labs.dev@gmail.com">stoic.labs.dev@gmail.com</a>
             </p>
         </section>
 
@@ -177,11 +181,11 @@
                 <li><strong>OpenAI:</strong> Ваші текстові запити відправляються в OpenAI для модерації та генерації історій.</li>
                 <li><strong>Giphy:</strong> Ми використовуємо API Giphy для пошуку та відображення GIF-анімацій.</li>
                 <li><strong>Cloudinary:</strong> Використовується для рендеру фінальних відео, якими ви ділитесь.</li>
-                <li><strong>Google Firebase:</strong> Наш бекенд, база даних (Firestore) та аналітика крашів.</li>
+                <li><strong>Google Firebase:</strong> Наш бекенд, база даних (Firestore) та аналітика крашів (Firebase Crashlytics).</li>
             </ul>
 
             <h3>3. Реклама та Аналітика</h3>
-            <p>У додатку є можливість перегляду реклами за винагороду (додаткові спроби). Ми використовуємо сторонні рекламні мережі (наприклад, Google AdMob). Ці мережі можуть збирати ваш IP та рекламний ідентифікатор пристрою (Advertising ID) для показу реклами. Ви можете вимкнути персоналізацію реклами в налаштуваннях вашого телефону.</p>
+            <p>У додатку є можливість перегляду реклами за винагороду (додаткові спроби). Ми використовуємо сторонні рекламні мережі (наприклад, Google AdMob). Ці мережі можуть збирати ваш IP та рекламний ідентифікатор пристрою (Advertising ID) для показу реклами. Ви можете вимкнути персоналізацію реклами в налаштуваннях вашого телефону. Детальніше про те, як Google використовує ваші дані, читайте на сторінці <a href="https://policies.google.com/technologies/partner-sites" target="_blank">Політика конфіденційності та умови використання Google</a>.</p>
 
             <h3>4. Вікові обмеження</h3>
             <p>Через специфічний сатиричний та абсурдний гумор, додаток не призначений для дітей. Ми свідомо не збираємо дані осіб віком до 13 років (або до 16 у деяких країнах ЄС). Якщо ви є батьками і вважаєте, що ваша дитина використовує додаток, зв'яжіться з нами.</p>
@@ -189,9 +193,12 @@
             <h3>5. Приватна генерація (Не соціальна мережа)</h3>
             <p>CRINGEorBASED — це одиночна гра. Усі історії та відео генеруються приватно для вашого пристрою. У додатку немає публічної стрічки, профілів чи соціальної взаємодії між гравцями. Ви несете повну особисту відповідальність за будь-який контент, який ви вирішите експортувати та опублікувати у сторонніх соціальних мережах.</p>
 
-            <h3>6. Контакти</h3>
+            <h3>6. Термін зберігання даних та Ваші права</h3>
+            <p>Ми зберігаємо згенеровані історії (<code>cached_stories</code>) до 30 днів для оптимізації продуктивності, після чого вони автоматично видаляються. Дані про ваші ліміти генерацій (<code>device_limits</code>) автоматично видаляються через 3 роки неактивності. Device ID, пов'язані з серйозними порушеннями Умов (бани), зберігаються назавжди для забезпечення дії блокування. Ви маєте право вимагати видалення ваших даних у будь-який час, зв'язавшись із нами.</p>
+
+            <h3>7. Контакти</h3>
             <p>Якщо у вас є питання або запит на видалення даних, напишіть нам: <br>
-               <a href="mailto:stoic.labs.dev@gmail.com" class="contact-link">stoic.labs.dev@gmail.com</a>
+               <a href="mailto:stoic.labs.dev@gmail.com">stoic.labs.dev@gmail.com</a>
             </p>
         </section>
 
