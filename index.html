@@ -96,16 +96,16 @@
     <div id="english">
         <section id="privacy">
             <h2>Privacy Policy 🕵️‍♂️</h2>
-            <p><strong>Developer:</strong> Oleksii Demchenko</p> <p><strong>Last Updated:</strong> April 23, 2026</p>
+            <p><strong>Developer:</strong> Oleksii Demchenko</p> <p><strong>Last Updated:</strong> April 25, 2026</p>
             
             <p>Welcome to <strong>CRINGEorBASED</strong>. This Privacy Policy explains how we handle your data to comply with App Store and Google Play guidelines.</p>
 
-            <h3>1. Data We Collect (Device IDs)</h3>
-            <p>We do not collect personal information like your name, email, or contacts. We use <strong>Anonymous Authentication</strong> and collect your <strong>Device ID</strong>. This is stored securely in our database solely for:</p>
+            <h3>1. Data We Collect (Anonymous User IDs)</h3>
+            <p>We do not collect personal information like your name, email, or contacts. We use <strong>Firebase Anonymous Authentication</strong> which creates a unique, anonymous <strong>User ID (UID)</strong>. We do not track your hardware Device ID. This UID is stored securely in our database solely for:</p>
             <ul>
                 <li>Enforcing daily generation limits.</li>
                 <li>Tracking terms violations (NSFW/Violence attempts).</li>
-                <li>Permanently banning abusive devices to maintain a safe environment.</li>
+                <li>Permanently banning abusive UIDs to maintain a safe environment.</li>
             </ul>
 
             <h3>2. Third-Party Services</h3>
@@ -128,7 +128,7 @@
             <p>CRINGEorBASED is a single-player experience. The stories and videos you generate are created locally for your device. We do not host a public feed, public profiles, or a social timeline. You are solely responsible for any content you choose to export and share externally on third-party social media platforms.</p>
 
             <h3>6. Data Retention & User Rights</h3>
-            <p>We retain generated stories (<code>cached_stories</code>) for up to 30 days to optimize performance, after which they are automatically deleted. Device IDs and their associated generation limits or ban statuses are retained permanently to enforce fair usage and maintain a safe environment. You have the right to request the deletion of your data at any time by contacting us.</p>
+            <p>We retain generated stories (<code>cached_stories</code>) for up to 30 days to optimize performance, after which they are automatically deleted. Anonymous UIDs and their associated generation limits or ban statuses are retained permanently to enforce fair usage and maintain a safe environment. You have the right to request the deletion of your data at any time by contacting us.</p>
 
             <h3>7. Contact Us</h3>
             <p>If you have any questions or data deletion requests, email us at: <br>
@@ -138,7 +138,7 @@
 
         <section id="terms">
             <h2>Terms of Service (EULA) 📜</h2>
-            <p><strong>Last Updated:</strong> April 23, 2026</p>
+            <p><strong>Last Updated:</strong> April 25, 2026</p>
 
             <p>By downloading or using <strong>CRINGEorBASED</strong>, you agree to these terms.</p>
 
@@ -149,7 +149,7 @@
                 <li>Extreme, realistic violence or gore.</li>
                 <li>Hate speech, bullying, or illegal content.</li>
             </ul>
-            <p><strong>Enforcement:</strong> All prompts pass through an automated Moderation API. If you attempt to break these rules, your violation is logged. Repeated violations (5 strikes) will result in an <strong>automated, permanent device ban within this app</strong> from generating content. This decision is final.</p>
+            <p><strong>Enforcement:</strong> All prompts pass through an automated Moderation API. If you attempt to break these rules, your violation is logged. Repeated violations (5 strikes) will result in an <strong>automated, permanent ban within this app</strong> from generating content. This decision is final.</p>
 
             <h3>2. User Responsibility</h3>
             <p>You are solely responsible for the prompts you input and the content you choose to export and share on social media.</p>
@@ -164,16 +164,16 @@
     <div id="ukrainian">
         <section id="privacy-uk">
             <h2>Політика Конфіденційності 🕵️‍♂️</h2>
-            <p><strong>Розробник:</strong> Oleksii Demchenko</p> <p><strong>Останнє оновлення:</strong> 23 Квітня 2026</p>
+            <p><strong>Розробник:</strong> Oleksii Demchenko</p> <p><strong>Останнє оновлення:</strong> 25 Квітня 2026</p>
             
             <p>Вітаємо у <strong>CRINGEorBASED</strong>. Ця політика пояснює, як ми обробляємо дані відповідно до правил App Store та Google Play.</p>
 
-            <h3>1. Які дані ми збираємо (Device ID)</h3>
-            <p>Ми не збираємо ваші імена, пошти чи контакти. Ми використовуємо <strong>Анонімну Авторизацію</strong> та збираємо унікальний <strong>Device ID (Ідентифікатор пристрою)</strong>. Він зберігається у нашій базі виключно для:</p>
+            <h3>1. Які дані ми збираємо (Анонімні User ID)</h3>
+            <p>Ми не збираємо ваші імена, пошти чи контакти. Ми використовуємо <strong>Анонімну Авторизацію Firebase</strong>, яка створює унікальний <strong>Анонімний User ID (UID)</strong>. Ми не відстежуємо апаратні ідентифікатори вашого пристрою. Цей UID зберігається у нашій базі виключно для:</p>
             <ul>
                 <li>Контролю щоденних лімітів на генерацію.</li>
                 <li>Фіксації спроб згенерувати заборонений контент.</li>
-                <li>Вічного блокування (бану) девайсів порушників для збереження безпеки.</li>
+                <li>Вічного блокування (бану) акаунтів порушників для збереження безпеки.</li>
             </ul>
 
             <h3>2. Сторонні Сервіси (Third-Party APIs)</h3>
@@ -196,7 +196,7 @@
             <p>CRINGEorBASED — це одиночна гра. Усі історії та відео генеруються приватно для вашого пристрою. У додатку немає публічної стрічки, профілів чи соціальної взаємодії між гравцями. Ви несете повну особисту відповідальність за будь-який контент, який ви вирішите експортувати та опублікувати у сторонніх соціальних мережах.</p>
 
             <h3>6. Термін зберігання даних та Ваші права</h3>
-            <p>Ми зберігаємо згенеровані історії (<code>cached_stories</code>) до 30 днів для оптимізації продуктивності, після чого вони автоматично видаляються. Device ID та дані про їхні ліміти генерацій або статуси блокування зберігаються назавжди для забезпечення чесного використання та безпеки. Ви маєте право вимагати видалення ваших даних у будь-який час, зв'язавшись із нами.</p>
+            <p>Ми зберігаємо згенеровані історії (<code>cached_stories</code>) до 30 днів для оптимізації продуктивності, після чого вони автоматично видаляються. Анонімні UID та дані про їхні ліміти генерацій або статуси блокування зберігаються назавжди для забезпечення чесного використання та безпеки. Ви маєте право вимагати видалення ваших даних у будь-який час, зв'язавшись із нами.</p>
 
             <h3>7. Контакти</h3>
             <p>Якщо у вас є питання або запит на видалення даних, напишіть нам: <br>
@@ -206,7 +206,7 @@
 
         <section id="terms-uk">
             <h2>Умови Використання (EULA) 📜</h2>
-            <p><strong>Останнє оновлення:</strong> 23 Квітня 2026</p>
+            <p><strong>Останнє оновлення:</strong> 25 Квітня 2026</p>
 
             <p>Завантажуючи та використовуючи <strong>CRINGEorBASED</strong>, ви погоджуєтесь з цими умовами.</p>
 
@@ -217,7 +217,7 @@
                 <li>Жорстоке реалістичне насилля.</li>
                 <li>Хейт-спіч, булінг або незаконний контент.</li>
             </ul>
-            <p><strong>Покарання:</strong> Усі запити проходять через автоматичну систему модерації. За спробу порушити правила ви отримуєте страйк. Після 5 страйків ваш девайс отримає <strong>перманентний бан у цьому додатку</strong> на генерацію контенту. Оскарженню не підлягає.</p>
+            <p><strong>Покарання:</strong> Усі запити проходять через автоматичну систему модерації. За спробу порушити правила ви отримуєте страйк. Після 5 страйків ваш акаунт отримає <strong>перманентний бан у цьому додатку</strong> на генерацію контенту. Оскарженню не підлягає.</p>
 
             <h3>2. Відповідальність користувача</h3>
             <p>Ви несете повну відповідальність за ідеї, які вводите в додаток, та за контент, яким вирішуєте поділитися у соціальних мережах.</p>
