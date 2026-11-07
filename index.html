@@ -96,7 +96,7 @@
     <div id="english">
         <section id="privacy">
             <h2>Privacy Policy 🕵️‍♂️</h2>
-            <p><strong>Developer:</strong> Oleksii Demchenko</p> <p><strong>Last Updated:</strong> November 6, 2026</p>
+            <p><strong>Developer:</strong> Oleksii Demchenko</p> <p><strong>Last Updated:</strong> November 7, 2026</p>
             
             <p>Welcome to <strong>CRINGEorBASED</strong>. This Privacy Policy explains how we handle your data in line with App Store guidelines.</p>
 
@@ -106,10 +106,14 @@
                 <li>Enforcing daily generation limits.</li>
                 <li>Tracking terms violations (NSFW/Violence attempts).</li>
                 <li>Permanently banning abusive UIDs to maintain a safe environment.</li>
-                <li>Crediting rewarded ads and creating friend challenges (see section 6).</li>
+                <li>Crediting rewarded ads and running friend challenges and Daily Lore (see section 6).</li>
+                <li>Backing up your cards, packs and streak.</li>
+                <li>Sending notifications, if you allow them.</li>
             </ul>
             <p>Your <strong>story ideas (text prompts)</strong> are stored on our servers together with the generated story (see section 7). Please do not include personal information in them.</p>
-            <p><strong>Stored only on your device:</strong> your card collection and packs, language, and app settings. Deleting the app removes them, and they cannot be restored.</p>
+            <p><strong>Progress backup:</strong> your card collection, packs and Daily Lore streak are saved on our servers, linked to your UID. A recovery code lets you move them to another device. We store only a hash of the code, it works once, and anyone who has the code can claim that progress, so keep it private.</p>
+            <p><strong>Notifications:</strong> if you allow notifications, we store a push token and your language, linked to your UID. Apple Push Notification service and Firebase Cloud Messaging deliver the notifications.</p>
+            <p><strong>Stored only on your device:</strong> your language and app settings.</p>
 
             <h3>2. Third-Party Services</h3>
             <p>To provide our core features, we share strictly necessary data with trusted third-party APIs:</p>
@@ -117,7 +121,7 @@
                 <li><strong>OpenAI:</strong> Your text prompts are sent to OpenAI for moderation and story generation. OpenAI does not use this data to train public models.</li>
                 <li><strong>Klipy:</strong> We use Klipy's API to fetch relevant GIFs based on generated keywords.</li>
                 <li><strong>Cloudinary:</strong> Delivers story images in older app versions. The current version does not use it.</li>
-                <li><strong>Google Firebase:</strong> Used for anonymous sign-in (Authentication), protecting our servers from unauthorized apps (App Check), secure backend infrastructure (Firestore and Cloud Functions), delivering story images and challenge links (Hosting), crash reporting (Crashlytics), app usage tracking (Analytics), and dynamic app configuration (Remote Config).</li>
+                <li><strong>Google Firebase:</strong> Used for anonymous sign-in (Authentication), protecting our servers from unauthorized apps (App Check), secure backend infrastructure (Firestore and Cloud Functions), delivering story images, card art and challenge links (Hosting), notifications (Cloud Messaging), crash reporting (Crashlytics), app usage tracking (Analytics), and dynamic app configuration (Remote Config).</li>
             </ul>
 
             <h3>3. Advertising & Analytics</h3>
@@ -138,10 +142,12 @@
             <h3>6. Generated Content, Sharing and Friend Challenges (Not a Social Network)</h3>
             <p>We do not host a public feed, public profiles, or a social timeline. AI stories are generated on our servers and cached, so another user who enters the same idea may receive the same story, but not your identity.</p>
             <p><strong>Friend challenges:</strong> when you tap "Challenge a friend", we store your UID, a reference to the story, and your four choices, and create a link with a code. Anyone who has this link or code can open the challenge and see the story and your result. They do not receive your UID or your story idea. Share challenge links only with people you choose.</p>
+            <p>When you finish someone else's challenge, we store your four choices with your UID. The challenge creator sees your brain age and choice match, but not your name or UID. The app tells you this on the result screen.</p>
+            <p><strong>Daily Lore:</strong> we store your first result for each daily story, linked to your UID, and show players combined statistics about the paths taken. These statistics do not identify you.</p>
             <p><strong>Cards and recordings:</strong> result cards and collectible cards are created on your device. The app accesses your photo library only to save a card when you choose to save it, and screen recordings are made by you using your device's own tools. You are solely responsible for any content you choose to share on third-party platforms.</p>
 
             <h3>7. Data Retention & User Rights</h3>
-            <p>We retain generated stories, including the idea you entered (<code>cached_stories</code>), for up to 30 days to optimize performance, and friend challenges for up to 30 days, after which they are automatically deleted. Ad reward records are kept for up to 30 days to prevent duplicate rewards, then automatically deleted. Anonymous UIDs and their associated generation limits or ban statuses are retained permanently to enforce fair usage and maintain a safe environment. You have the right to request the deletion of your data at any time by contacting us.</p>
+            <p>We retain generated stories, including the idea you entered (<code>cached_stories</code>), for up to 30 days to optimize performance, and friend challenges for up to 30 days, after which they are automatically deleted. Ad reward records, challenge results and Daily Lore results are kept for up to 30 days, then automatically deleted. Push tokens are kept for up to 90 days after your last update. Progress backups and recovery codes are kept for up to one year after your last save. Anonymous UIDs and their associated generation limits or ban statuses are retained permanently to enforce fair usage and maintain a safe environment. You have the right to request the deletion of your data at any time by contacting us.</p>
 
             <h3>8. Contact Us</h3>
             <p>If you have any questions or data deletion requests, email us at: <br>
@@ -151,7 +157,7 @@
 
         <section id="terms">
             <h2>Terms of Service (EULA) 📜</h2>
-            <p><strong>Last Updated:</strong> November 6, 2026</p>
+            <p><strong>Last Updated:</strong> November 7, 2026</p>
 
             <p>By downloading or using <strong>CRINGEorBASED</strong>, you agree to these terms.</p>
 
@@ -168,7 +174,7 @@
             <p>To ensure server stability and fair usage, the following limits apply:
             <ul>
                 <li><strong>AI Generations:</strong> Users get 3 free generations per day. You can earn up to <strong>8 additional credits</strong> daily by watching rewarded ads (Max 11 total). Limits reset at 00:00 UTC.</li>
-                <li><strong>Collectible Cards:</strong> Each finished story awards a free pack with a random card, up to <strong>5 packs per day</strong>. The odds are shown in the app. Cards cannot be bought, sold or exchanged, have no monetary value, and are stored only on your device, so they may be lost if the app is deleted.</li>
+                <li><strong>Collectible Cards:</strong> Each finished story awards a free pack with a random card, up to <strong>5 packs per day</strong>. The odds are shown in the app. You can trade 5 duplicates for a pack inside the app. Cards cannot be bought, sold or transferred between players and have no monetary value. Keep your recovery code safe, because we cannot restore progress without it if your anonymous account is lost.</li>
                 <li><strong>Friend Challenges:</strong> Challenge links are valid for up to 30 days and may stop working earlier if the AI story they use is no longer stored.</li>
                 <li><strong>Service Availability:</strong> We use Remote Config to manage app features and server load. We reserve the right to temporarily disable or limit features without prior notice to maintain core app stability.</li>
             </ul>
@@ -187,7 +193,7 @@
     <div id="ukrainian">
         <section id="privacy-uk">
             <h2>Політика Конфіденційності 🕵️‍♂️</h2>
-            <p><strong>Розробник:</strong> Oleksii Demchenko</p> <p><strong>Останнє оновлення:</strong> 6 листопада 2026</p>
+            <p><strong>Розробник:</strong> Oleksii Demchenko</p> <p><strong>Останнє оновлення:</strong> 7 листопада 2026</p>
             
             <p>Вітаємо у <strong>CRINGEorBASED</strong>. Ця політика пояснює, як ми обробляємо дані відповідно до правил App Store.</p>
 
@@ -197,10 +203,14 @@
                 <li>Контролю щоденних лімітів на генерацію.</li>
                 <li>Фіксації спроб згенерувати заборонений контент.</li>
                 <li>Вічного блокування (бану) акаунтів порушників для збереження безпеки.</li>
-                <li>Нарахування нагород за рекламу та створення викликів другу (див. розділ 6).</li>
+                <li>Нарахування нагород за рекламу, роботи викликів другу та Лору дня (див. розділ 6).</li>
+                <li>Резервного копіювання карток, пакунків і серії.</li>
+                <li>Надсилання сповіщень, якщо ви їх дозволили.</li>
             </ul>
             <p>Ваші <strong>ідеї для історій (текстові запити)</strong> зберігаються на наших серверах разом зі згенерованою історією (див. розділ 7). Будь ласка, не вказуйте в них особисті дані.</p>
-            <p><strong>Зберігається лише на вашому пристрої:</strong> колекція карток і пакунки, мова та налаштування застосунку. Видалення застосунку стирає ці дані без можливості відновлення.</p>
+            <p><strong>Резервна копія прогресу:</strong> ваша колекція карток, пакунки та серія Лору дня зберігаються на наших серверах і прив'язані до вашого UID. Код відновлення дає змогу перенести їх на інший пристрій. Ми зберігаємо лише хеш коду, він діє один раз, а кожен, хто має код, може забрати цей прогрес, тому тримайте його в таємниці.</p>
+            <p><strong>Сповіщення:</strong> якщо ви дозволили сповіщення, ми зберігаємо токен сповіщень і вашу мову, прив'язані до UID. Сповіщення доставляють Apple Push Notification service і Firebase Cloud Messaging.</p>
+            <p><strong>Зберігається лише на вашому пристрої:</strong> мова та налаштування застосунку.</p>
 
             <h3>2. Сторонні Сервіси (Third-Party APIs)</h3>
             <p>Для роботи додатку ми передаємо суворо необхідні дані стороннім сервісам:</p>
@@ -208,7 +218,7 @@
                 <li><strong>OpenAI:</strong> Ваші текстові запити відправляються в OpenAI для модерації та генерації історій.</li>
                 <li><strong>Klipy:</strong> Ми використовуємо API Klipy для пошуку та відображення GIF-анімацій.</li>
                 <li><strong>Cloudinary:</strong> Доставляє зображення історій у старих версіях застосунку. Поточна версія його не використовує.</li>
-                <li><strong>Google Firebase:</strong> Анонімний вхід (Authentication), захист серверів від неавторизованих застосунків (App Check), наш бекенд (Firestore і Cloud Functions), доставка зображень історій і посилань на виклики (Hosting), аналітика крашів (Crashlytics), збір статистики використання (Analytics) та динамічне налаштування застосунку (Remote Config).</li>
+                <li><strong>Google Firebase:</strong> Анонімний вхід (Authentication), захист серверів від неавторизованих застосунків (App Check), наш бекенд (Firestore і Cloud Functions), доставка зображень історій, карток і посилань на виклики (Hosting), сповіщення (Cloud Messaging), аналітика крашів (Crashlytics), збір статистики використання (Analytics) та динамічне налаштування застосунку (Remote Config).</li>
             </ul>
 
             <h3>3. Реклама та Аналітика</h3>
@@ -229,10 +239,12 @@
             <h3>6. Згенерований контент, шеринг і виклики другу (Не соціальна мережа)</h3>
             <p>У застосунку немає публічної стрічки чи профілів. ШІ-історії генеруються на наших серверах і кешуються, тому інший користувач, який введе ту саму ідею, може отримати ту саму історію, але не дізнається, хто ви.</p>
             <p><strong>Виклики другу:</strong> коли ви натискаєте «Кинути виклик другу», ми зберігаємо ваш UID, посилання на історію та ваші чотири вибори і створюємо посилання з кодом. Кожен, хто має це посилання або код, може відкрити виклик і побачити історію та ваш результат. Він не отримує ваш UID чи вашу ідею для історії. Надсилайте посилання лише тим, кому хочете.</p>
+            <p>Коли ви проходите чужий виклик, ми зберігаємо ваші чотири вибори разом із UID. Автор виклику бачить ваш вік мозку та збіг виборів, але не ваше ім'я чи UID. Застосунок попереджає про це на фінальному екрані.</p>
+            <p><strong>Лор дня:</strong> ми зберігаємо ваш перший результат для кожної щоденної історії, прив'язаний до UID, і показуємо гравцям загальну статистику шляхів. Ця статистика не ідентифікує вас.</p>
             <p><strong>Картки та записи екрана:</strong> картки результату й колекційні картки створюються на вашому пристрої. Застосунок звертається до фототеки лише для збереження картки, коли ви самі цього хочете, а запис екрана ви робите засобами свого пристрою. Ви несете повну відповідальність за контент, яким вирішите поділитися на сторонніх платформах.</p>
 
             <h3>7. Термін зберігання даних та Ваші права</h3>
-            <p>Ми зберігаємо згенеровані історії разом із введеною ідеєю (<code>cached_stories</code>) до 30 днів для оптимізації продуктивності, а виклики другу — до 30 днів, після чого вони автоматично видаляються. Записи про нагороди за рекламу зберігаються до 30 днів, щоб запобігти повторному нарахуванню, після чого автоматично видаляються. Анонімні UID та дані про їхні ліміти генерацій або статуси блокування зберігаються назавжди для забезпечення чесного використання та безпеки. Ви маєте право вимагати видалення ваших даних у будь-який час, зв'язавшись із нами.</p>
+            <p>Ми зберігаємо згенеровані історії разом із введеною ідеєю (<code>cached_stories</code>) до 30 днів для оптимізації продуктивності, а виклики другу — до 30 днів, після чого вони автоматично видаляються. Записи про нагороди за рекламу, результати викликів і Лору дня зберігаються до 30 днів, після чого автоматично видаляються. Токени сповіщень зберігаються до 90 днів після останнього оновлення. Резервні копії прогресу й коди відновлення зберігаються до року після останнього збереження. Анонімні UID та дані про їхні ліміти генерацій або статуси блокування зберігаються назавжди для забезпечення чесного використання та безпеки. Ви маєте право вимагати видалення ваших даних у будь-який час, зв'язавшись із нами.</p>
 
             <h3>8. Контакти</h3>
             <p>Якщо у вас є питання або запит на видалення даних, напишіть нам: <br>
@@ -242,7 +254,7 @@
 
         <section id="terms-uk">
             <h2>Умови Використання (EULA) 📜</h2>
-            <p><strong>Останнє оновлення:</strong> 6 листопада 2026</p>
+            <p><strong>Останнє оновлення:</strong> 7 листопада 2026</p>
 
             <p>Завантажуючи та використовуючи <strong>CRINGEorBASED</strong>, ви погоджуєтесь з цими умовами.</p>
 
@@ -259,7 +271,7 @@
             <p>Для стабільної роботи серверів та чесного використання діють такі обмеження:
             <ul>
                 <li><strong>Генерації ШІ:</strong> Користувачі отримують 3 безкоштовні спроби на день. Ви можете отримати до <strong>8 додаткових спроб</strong> на добу, переглядаючи рекламу за винагороду (макс. 11 сумарно). Ліміти оновлюються о 00:00 UTC.</li>
-                <li><strong>Колекційні картки:</strong> Кожна завершена історія дає безкоштовний пакунок із випадковою карткою, до <strong>5 пакунків на день</strong>. Шанси вказані в застосунку. Картки не можна купити, продати чи обміняти, вони не мають грошової вартості й зберігаються лише на вашому пристрої, тому можуть бути втрачені після видалення застосунку.</li>
+                <li><strong>Колекційні картки:</strong> Кожна завершена історія дає безкоштовний пакунок із випадковою карткою, до <strong>5 пакунків на день</strong>. Шанси вказані в застосунку. У застосунку можна обміняти 5 дублікатів на пакунок. Картки не можна купити, продати чи передати іншому гравцю, вони не мають грошової вартості. Зберігайте код відновлення: якщо анонімний акаунт буде втрачено, без нього ми не зможемо повернути прогрес.</li>
                 <li><strong>Виклики другу:</strong> Посилання на виклик діє до 30 днів і може перестати працювати раніше, якщо ШІ-історія більше не зберігається.</li>
                 <li><strong>Доступність сервісів:</strong> Ми використовуємо Remote Config для керування функціями застосунку та навантаженням на сервери. Ми залишаємо за собою право тимчасово вимикати або обмежувати функції без попередження для збереження стабільності застосунку.</li>
             </ul>
